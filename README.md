@@ -2,6 +2,10 @@
 
 StudySync is a full-stack web application designed to help students focus together using synchronized Pomodoro sessions, shared resource boards, and real-time presence tracking.
 
+## Problem Statement
+
+Students often struggle to maintain focus and accountability during long study sessions, especially when working remotely or alone. Traditional Pomodoro timers are isolated, single-player experiences that provide no external motivation. StudySync solves this by creating a synchronized, multiplayer study environment where peers can hold each other accountable, track real-time presence, and share resources within a strict, distraction-free interface.
+
 ## Features
 
 - **🛡️ Secure Authentication**: Firebase-powered email/password login and signup.

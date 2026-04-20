@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 115%;
+}
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #FFFFFF;
+  background-color: #0a0a0a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+#root {
+  width: 100%;
+  position: relative;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-5 py-2.5 bg-[#ffffff] text-[#000000] hover:bg-[#e0e0e0] transition-colors duration-200 font-medium flex items-center justify-center gap-2;
+  }
+  .btn-secondary {
+    @apply px-5 py-2.5 bg-transparent text-[#ffffff] border border-[#333333] hover:border-[#666666] transition-colors duration-200 font-medium flex items-center justify-center gap-2;
+  }
+  .card {
+    @apply bg-[#111111] border border-[#333333] p-6 relative overflow-hidden;
+  }
+  .input-field {
+    @apply w-full px-5 py-3 bg-[#0a0a0a] border border-[#333333] focus:outline-none focus:ring-0 focus:border-[#555555] text-[#ffffff] placeholder-[#888888] transition-colors duration-200 font-normal;
+  }
+  .glass {
+    @apply bg-[#111111] border border-[#333333];
+  }
+  .text-glow {
+    text-shadow: none !important;
+  }
+  
+  /* Global reset for 6px rounding except explicitly marked circles */
+  * {
+    border-radius: 6px !important;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  }
+  .font-black, .font-bold, .font-extrabold {
+    font-weight: 500 !important;
+  }
+  .uppercase {
+    letter-spacing: normal !important;
+  }
+  .rounded-full, .rounded-circle {
+    border-radius: 9999px !important;
+  }
+  
+  /* Remove glows */
+  .shadow-2xl, .shadow-xl, .shadow-lg, .drop-shadow-2xl {
+    box-shadow: none !important;
+    filter: none !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full hover:bg-slate-700 transition-colors;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
